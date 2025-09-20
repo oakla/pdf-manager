@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-manager"
+version = "0.1.0"
+description = "A collection of tools for managing PDFs"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pypdf>=3.17.0",
+    "click>=8.1.0",
+]
+authors = [
+    {name = "PDF Manager"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.scripts]
+pdf-manager = "pdf_manager.cli:cli"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
